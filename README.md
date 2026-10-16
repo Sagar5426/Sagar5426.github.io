@@ -1,10 +1,12 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My College Mate — Sagar Jangra</title>
     <meta name="description" content="Download My College Mate by Sagar Jangra on the Apple App Store and Google Play Store.">
+    <!-- Browser Tab Icon (Favicon) -->
+    <link rel="icon" type="image/png" href="CollegeHat.png">
+    <link rel="apple-touch-icon" href="CollegeHat.png">
     <style>
         :root {
             --bg-primary: #07090e;
@@ -79,22 +81,24 @@
 
         /* App Icon Emblem */
         .app-icon {
-            width: 76px;
-            height: 76px;
+            width: 88px;
+            height: 88px;
             margin: 0 auto 24px;
-            border-radius: 20px;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(99, 102, 241, 0.2));
-            border: 1px solid rgba(99, 102, 241, 0.35);
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.18);
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
         }
 
-        .app-icon svg {
-            width: 38px;
-            height: 38px;
-            color: #60a5fa;
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .developer-badge {
@@ -227,11 +231,8 @@
     <div class="glow glow-bottom"></div>
 
     <main class="card">
-        <div class="app-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-            </svg>
+        <div class="app-icon">
+            <img src="CollegeHat.png" alt="My College Mate Icon">
         </div>
 
         <span class="developer-badge">Sagar Jangra</span>
@@ -274,8 +275,6 @@
     </main>
 
     <script>
-        // Subtle UX enhancement: highlights the button matching the visitor's OS
-        // while keeping both buttons completely independent and clickable.
         (function highlightDeviceButton() {
             const ua = navigator.userAgent || navigator.vendor || window.opera;
             const iosBtn = document.getElementById('ios-btn');
