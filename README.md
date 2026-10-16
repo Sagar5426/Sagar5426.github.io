@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -211,7 +212,7 @@
         }
 
         /* ==========================================
-           Why Choose Us Section (Redesigned)
+           Why Choose Us Section
            ========================================== */
         .why-section {
             margin-top: 32px;
@@ -249,12 +250,13 @@
             margin-bottom: 22px;
         }
 
-        /* Bento Grid on Larger Screens */
+        /* Feature Grid */
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 12px;
             text-align: left;
+            margin-bottom: 28px; /* Space between grid and closing text */
         }
 
         .feature {
@@ -279,7 +281,6 @@
             border-color: var(--border-hover);
         }
 
-        /* Full-width 5th card stays horizontal on desktop */
         .feature:last-child {
             grid-column: 1 / -1;
             flex-direction: row;
@@ -331,26 +332,29 @@
             color: var(--text-secondary);
         }
 
-        /* Closing Call to Action Banner */
+        /* Closing Call to Action */
         .closing-cta {
-            margin-top: 20px;
-            padding: 14px 16px;
-            border-radius: 14px;
+            margin-top: 28px;
+            padding: 18px 20px;
+            border-radius: 16px;
             background: linear-gradient(
                 135deg,
                 rgba(59, 130, 246, 0.09),
                 rgba(99, 102, 241, 0.09)
             );
             border: 1px solid rgba(96, 165, 250, 0.18);
-            font-size: 13px;
-            line-height: 1.55;
+            font-size: 13.5px;
+            line-height: 1.6;
             color: #cbd5e1;
             text-align: center;
         }
 
         .closing-cta strong {
+            display: block;
             color: #ffffff;
+            font-size: 14.5px;
             font-weight: 700;
+            margin-bottom: 4px;
         }
 
         /* ==========================================
@@ -367,7 +371,6 @@
             }
         }
 
-        /* Mobile Optimization for Why Choose Us & Card */
         @media (max-width: 460px) {
             body {
                 padding: 16px 12px;
@@ -396,10 +399,10 @@
                 font-size: 20px;
             }
 
-            /* Stack into a clean 1-column horizontal list on mobile */
             .feature-grid {
                 grid-template-columns: 1fr;
-                gap: 10px;
+                gap: 12px;
+                margin-bottom: 24px;
             }
 
             .feature,
@@ -424,6 +427,11 @@
             .feature p {
                 font-size: 13px;
                 line-height: 1.45;
+            }
+
+            .closing-cta {
+                margin-top: 24px;
+                padding: 16px;
             }
         }
 
@@ -511,7 +519,7 @@
             <h2 class="why-title" id="why-title">Why choose us?</h2>
 
             <p class="why-subtitle">
-                Less college admin. More time for what matters.
+                Less college hassle. More time for what matters.
             </p>
 
             <div class="feature-grid">
@@ -580,7 +588,7 @@
             </div>
 
             <p class="closing-cta">
-                <strong>Your college life, simplified.</strong><br>
+                <strong>Your college life, simplified.</strong>
                 Download MyCollegeMate and make every class count.
             </p>
 
