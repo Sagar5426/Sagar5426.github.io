@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -83,7 +84,7 @@
         .app-icon {
             width: 88px;
             height: 88px;
-            margin: 0 auto 24px;
+            margin: 0 auto 20px;
             border-radius: 22px;
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.12);
@@ -99,20 +100,6 @@
             height: 100%;
             object-fit: cover;
             display: block;
-        }
-
-        .developer-badge {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            color: #60a5fa;
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.25);
-            padding: 6px 14px;
-            border-radius: 999px;
-            margin-bottom: 16px;
         }
 
         h1 {
@@ -235,7 +222,6 @@
             <img src="CollegeHat.png" alt="My College Mate Icon">
         </div>
 
-        <span class="developer-badge">Sagar Jangra</span>
         <h1>My College Mate</h1>
         <p class="subtitle">Track your attendance, manage your schedule, and stay on top of your classes effortlessly.</p>
 
