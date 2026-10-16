@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -78,7 +77,7 @@
             -webkit-backdrop-filter: blur(24px);
             border: 1px solid var(--border-glass);
             border-radius: 28px;
-            padding: 40px 32px 30px;
+            padding: 40px 32px 32px;
             text-align: center;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.65);
         }
@@ -211,108 +210,152 @@
             color: #64748b;
         }
 
-        /* Why Choose Us */
+        /* ==========================================
+           Why Choose Us Section (Redesigned)
+           ========================================== */
         .why-section {
-            margin-top: 30px;
-            padding-top: 25px;
+            margin-top: 32px;
+            padding-top: 28px;
             border-top: 1px solid var(--border-glass);
-            text-align: left;
+            text-align: center;
         }
 
         .why-eyebrow {
+            display: inline-block;
             color: #60a5fa;
-            font-size: 10px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.22);
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 10.5px;
             font-weight: 700;
-            letter-spacing: 1.8px;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
-            margin-bottom: 8px;
-            text-align: center;
+            margin-bottom: 12px;
         }
 
         .why-title {
-            font-size: 21px;
-            font-weight: 750;
+            font-size: 22px;
+            font-weight: 800;
             letter-spacing: -0.5px;
-            margin-bottom: 8px;
-            text-align: center;
+            margin-bottom: 6px;
             color: var(--text-primary);
         }
 
         .why-subtitle {
-            text-align: center;
             color: var(--text-secondary);
-            font-size: 13px;
+            font-size: 13.5px;
             line-height: 1.5;
             margin-bottom: 22px;
         }
 
+        /* Bento Grid on Larger Screens */
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 10px;
+            gap: 12px;
+            text-align: left;
         }
 
         .feature {
             display: flex;
+            flex-direction: column;
             align-items: flex-start;
-            gap: 10px;
-            padding: 14px 12px;
-            background: rgba(255, 255, 255, 0.025);
-            border: 1px solid rgba(255, 255, 255, 0.065);
-            border-radius: 14px;
-            transition: background 0.2s ease, border-color 0.2s ease;
+            gap: 12px;
+            padding: 16px;
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.04) 0%,
+                rgba(255, 255, 255, 0.015) 100%
+            );
+            border: 1px solid rgba(255, 255, 255, 0.075);
+            border-radius: 16px;
+            transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
         }
 
         .feature:hover {
-            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.055);
             border-color: var(--border-hover);
         }
 
+        /* Full-width 5th card stays horizontal on desktop */
+        .feature:last-child {
+            grid-column: 1 / -1;
+            flex-direction: row;
+            align-items: center;
+            gap: 14px;
+        }
+
         .feature-icon {
-            width: 30px;
-            height: 30px;
+            width: 38px;
+            height: 38px;
             flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 9px;
-            color: #93c5fd;
-            background: rgba(59, 130, 246, 0.12);
-            font-size: 17px;
-            font-weight: 600;
+            border-radius: 11px;
+            color: #60a5fa;
+            background: linear-gradient(
+                135deg,
+                rgba(59, 130, 246, 0.2),
+                rgba(99, 102, 241, 0.1)
+            );
+            border: 1px solid rgba(96, 165, 250, 0.22);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-icon svg {
+            width: 19px;
+            height: 19px;
+            stroke-width: 2;
+        }
+
+        .feature-content {
+            flex: 1;
+            min-width: 0;
         }
 
         .feature h3 {
-            font-size: 12.5px;
+            font-size: 14px;
             font-weight: 700;
-            line-height: 1.35;
-            margin: 1px 0 5px;
+            letter-spacing: -0.2px;
+            line-height: 1.3;
+            margin-bottom: 4px;
             color: #f1f5f9;
         }
 
         .feature p {
-            font-size: 11.5px;
+            font-size: 12.5px;
             line-height: 1.5;
             color: var(--text-secondary);
         }
 
-        .feature:last-child {
-            grid-column: 1 / -1;
-        }
-
-        /* Closing Call to Action */
+        /* Closing Call to Action Banner */
         .closing-cta {
-            margin-top: 24px;
+            margin-top: 20px;
+            padding: 14px 16px;
+            border-radius: 14px;
+            background: linear-gradient(
+                135deg,
+                rgba(59, 130, 246, 0.09),
+                rgba(99, 102, 241, 0.09)
+            );
+            border: 1px solid rgba(96, 165, 250, 0.18);
             font-size: 13px;
-            line-height: 1.6;
+            line-height: 1.55;
             color: #cbd5e1;
             text-align: center;
         }
 
         .closing-cta strong {
             color: #ffffff;
+            font-weight: 700;
         }
 
+        /* ==========================================
+           Responsive Breakpoints
+           ========================================== */
         @media (min-width: 440px) {
             .button-group {
                 flex-direction: row;
@@ -324,9 +367,10 @@
             }
         }
 
-        @media (max-width: 380px) {
+        /* Mobile Optimization for Why Choose Us & Card */
+        @media (max-width: 460px) {
             body {
-                padding: 14px;
+                padding: 16px 12px;
             }
 
             .card {
@@ -338,27 +382,48 @@
                 font-size: 28px;
             }
 
-            .feature-grid {
-                gap: 8px;
+            .subtitle {
+                font-size: 14.5px;
+                margin-bottom: 24px;
             }
 
-            .feature {
-                padding: 12px 9px;
-                gap: 8px;
+            .why-section {
+                margin-top: 28px;
+                padding-top: 24px;
+            }
+
+            .why-title {
+                font-size: 20px;
+            }
+
+            /* Stack into a clean 1-column horizontal list on mobile */
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .feature,
+            .feature:last-child {
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 14px;
+                gap: 14px;
             }
 
             .feature-icon {
-                width: 26px;
-                height: 26px;
-                font-size: 15px;
+                width: 40px;
+                height: 40px;
+                margin-top: 1px;
             }
 
             .feature h3 {
-                font-size: 12px;
+                font-size: 14.5px;
+                margin-bottom: 3px;
             }
 
             .feature p {
-                font-size: 11px;
+                font-size: 13px;
+                line-height: 1.45;
             }
         }
 
@@ -441,7 +506,7 @@
         <!-- Why Choose Us Section -->
         <section class="why-section" id="why-choose-us" aria-labelledby="why-title">
 
-            <p class="why-eyebrow">Made for student life</p>
+            <span class="why-eyebrow">Made for student life</span>
 
             <h2 class="why-title" id="why-title">Why choose us?</h2>
 
@@ -452,42 +517,63 @@
             <div class="feature-grid">
 
                 <article class="feature">
-                    <span class="feature-icon" aria-hidden="true">✦</span>
-                    <div>
+                    <span class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3l1.912 5.813a2 2 0 001.275 1.275L21 12l-5.813 1.912a2 2 0 00-1.275 1.275L12 21l-1.912-5.813a2 2 0 00-1.275-1.275L3 12l5.813-1.912a2 2 0 001.275-1.275L12 3z"/>
+                        </svg>
+                    </span>
+                    <div class="feature-content">
                         <h3>AI Timetable</h3>
                         <p>Turn a timetable photo into a schedule. Skip manual entry.</p>
                     </div>
                 </article>
 
                 <article class="feature">
-                    <span class="feature-icon" aria-hidden="true">↯</span>
-                    <div>
+                    <span class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </span>
+                    <div class="feature-content">
                         <h3>Quick Attendance</h3>
                         <p>Mark attendance from your lock screen or notifications.</p>
                     </div>
                 </article>
 
                 <article class="feature">
-                    <span class="feature-icon" aria-hidden="true">▤</span>
-                    <div>
+                    <span class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </span>
+                    <div class="feature-content">
                         <h3>Everything Together</h3>
                         <p>Keep notes, PDFs, and assignment reminders organized.</p>
                     </div>
                 </article>
 
                 <article class="feature">
-                    <span class="feature-icon" aria-hidden="true">✓</span>
-                    <div>
+                    <span class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </span>
+                    <div class="feature-content">
                         <h3>Student-Friendly</h3>
                         <p>A clean interface, minimal ads, and most features free.</p>
                     </div>
                 </article>
 
                 <article class="feature">
-                    <span class="feature-icon" aria-hidden="true">☁</span>
-                    <div>
+                    <span class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+                        </svg>
+                    </span>
+                    <div class="feature-content">
                         <h3>iCloud Sync for Apple Devices</h3>
-                        <p>Keep your data in sync across your Apple devices.</p>
+                        <p>Keep your data seamlessly in sync across your iPhone and iPad.</p>
                     </div>
                 </article>
 
