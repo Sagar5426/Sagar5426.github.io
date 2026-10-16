@@ -50,7 +50,7 @@
             const androidUrl = "https://play.google.com/store/apps/details?id=com.sagar.mycollegemate&pcampaignid=web_share";
             
             // Replace this with your actual iOS App Store link when available
-            const iosUrl = "https://apps.apple.com/app/idYOUR_APP_ID"; 
+            const iosUrl = "https://apps.apple.com/in/app/mycollegemate-attendance/id6754844571"; 
 
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
